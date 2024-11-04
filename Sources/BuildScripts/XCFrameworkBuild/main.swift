@@ -16,7 +16,7 @@ enum Library: String, CaseIterable {
     var version: String {
         switch self {
         case .libsmb2:
-            return "v5.0.0"
+            return "v5.0.2"
         }
     }
 
@@ -107,6 +107,7 @@ private class BuildLibsmb2: BaseBuild {
 
     override func arguments(platform: PlatformType, arch: ArchType) -> [String] {
         let options = [
+            "-DBUILD_SHARED_LIBS=OFF",
             "-DCMAKE_INSTALL_PREFIX=\(thinDir(platform: platform, arch: arch).path)"
         ]
 
