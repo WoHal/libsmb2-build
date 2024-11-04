@@ -2,8 +2,8 @@ name: Build and Release
 
 on:
   push:
-    tags:
-      - v5.**
+    branches:
+      - main
 
 jobs:
   build:
@@ -43,7 +43,7 @@ jobs:
             content = file.read()
           buildVersion = re.search(r'(case .libsmb2[^"]+?)"(.+?)"', content).group(2)
           print(f'build version: {buildVersion}')
-          releaseVersion = '${{ github.event.inputs.version }}' or normalize_version(buildVersion)
+          releaseVersion = normalize_version(buildVersion)
           print(f'release version: {releaseVersion}')
           set_env('BUILD_VERSION', buildVersion)
           set_env('RELEASE_VERSION', releaseVersion)
