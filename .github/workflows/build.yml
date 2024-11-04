@@ -43,7 +43,7 @@ jobs:
             content = file.read()
           buildVersion = re.search(r'(case .libsmb2[^"]+?)"(.+?)"', content).group(2)
           print(f'build version: {buildVersion}')
-          releaseVersion = normalize_version(buildVersion)
+          releaseVersion = buildVersion
           print(f'release version: {releaseVersion}')
           set_env('BUILD_VERSION', buildVersion)
           set_env('RELEASE_VERSION', releaseVersion)
@@ -75,6 +75,6 @@ jobs:
           ./dist/release/*.txt
           ./dist/release/*.zip
         prerelease: ${{ contains(env.RELEASE_VERSION, '-') }}
-        body: "https://github.com/samba-team/samba/blob/${{ env.BUILD_VERSION }}/WHATSNEW.txt"
+        body: ""
         generate_release_notes: true
         fail_on_unmatched_files: true
