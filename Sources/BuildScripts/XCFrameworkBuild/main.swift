@@ -16,7 +16,7 @@ enum Library: String, CaseIterable {
     var version: String {
         switch self {
         case .libsmb2:
-            return "v5.0.2"
+            return "v5.0.3"
         }
     }
 
