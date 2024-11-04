@@ -1,11 +1,9 @@
 name: Build and Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Release tag name (default libsmb2 version)'
-        default: ''
+  push:
+    tags:
+      - v5.**
 
 jobs:
   build:
