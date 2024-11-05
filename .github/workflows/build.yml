@@ -55,6 +55,7 @@ jobs:
 
     - name: Build
       run: |
+        make clean
         make build enable-split-platform version=${{ env.RELEASE_VERSION }}
 
     - name: Update Package.swift
