@@ -60,27 +60,27 @@ let package = Package(
         .binaryTarget(
             name: "Libsmb2",
             url: "https://github.com/WoHal/libsmb2-build/releases/download/5.0.3/Libsmb2.xcframework.zip",
-            checksum: "6251f3c4a394bc76451d31ba76a6a0db892170e34557030b1df0ee00d1c74788"
+            checksum: "5372a256dd50abcec20cdabc6ad03ff163d82bf8c7bda4a12a0f6f548dc979b7"
         ),
         .binaryTarget(
             name: "Libsmb2-ios",
             url: "https://github.com/WoHal/libsmb2-build/releases/download/5.0.3/Libsmb2-ios.xcframework.zip",
-            checksum: "6cb8f72394a80affb0e8f79dd9349542f075ae7b5ffec8902de02ae9d586bcdc"
+            checksum: "cdd11c6b1c152317fca8cac8ad7bb83e263c04c6bda6958410d39aa961f9ce5b"
         ),
         .binaryTarget(
             name: "Libsmb2-tvos",
             url: "https://github.com/WoHal/libsmb2-build/releases/download/5.0.3/Libsmb2-tvos.xcframework.zip",
-            checksum: "b2784683418d4135fcc264621b54238646c3cf2e7450bf48579b71daf2e8e43d"
+            checksum: "e5d578bc94107a2cdb8ebcc9cff6add692bab93b33e28bdc2a961a38754fe4cc"
         ),
         .binaryTarget(
             name: "Libsmb2-macos",
             url: "https://github.com/WoHal/libsmb2-build/releases/download/5.0.3/Libsmb2-macos.xcframework.zip",
-            checksum: "8e882bfb44fcb201e3cbcdd71fa59a46e9aba7bc1207b3bb4b8ce13e25531aaf"
+            checksum: "8a1407f1ec4d0780d6c100c7332b2e8b0a77386b4d9ce46624f5facb1e69bf57"
         ),
         .binaryTarget(
             name: "Libsmb2-xros",
             url: "https://github.com/WoHal/libsmb2-build/releases/download/5.0.3/Libsmb2-xros.xcframework.zip",
-            checksum: "150290a51b48e7f57d5ecdddc238f50626866bd326cb3400f77829071b177962"
+            checksum: "fdf62c14ddc26d6f6fe8fcfcb74541d70faadad3305f281f67a07d91ac59ee54"
         ),
         //AUTO_GENERATE_TARGETS_END//
     ]
