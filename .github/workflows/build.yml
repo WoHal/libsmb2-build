@@ -1,6 +1,11 @@
 name: Build and Release
 
 on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release tag name (default mpv version)'
+        default: ''
   push:
     branches:
       - main
@@ -43,7 +48,7 @@ jobs:
             content = file.read()
           buildVersion = re.search(r'(case .libsmb2[^"]+?)"(.+?)"', content).group(2)
           print(f'build version: {buildVersion}')
-          releaseVersion = buildVersion
+          releaseVersion = '${{ github.event.inputs.version }}' or normalize_version(buildVersion)
           print(f'release version: {releaseVersion}')
           set_env('BUILD_VERSION', buildVersion)
           set_env('RELEASE_VERSION', releaseVersion)
